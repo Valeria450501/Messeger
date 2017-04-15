@@ -60,8 +60,7 @@ public class BluetoothHandler {
         //TODO
         //Check sendingString
         //разбивать на маленькие сообшения по 9 символов
-        if(!this.bluetoothReader.write(Integer.toString(sendingString.length())))
-            return false;
+
         if(!this.bluetoothReader.write(sendingString))
             return false;
 
@@ -140,5 +139,9 @@ public class BluetoothHandler {
         }
 
         return true;
+    }
+
+    public MainActivity getMainActivity() {
+        return this.mainActivity;
     }
 }
