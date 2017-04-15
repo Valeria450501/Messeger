@@ -190,6 +190,30 @@ void letsGo(String command) {
         analogWrite(enB, 100);
         delay(1000);
         break;
+      case TURN90: 
+        digitalWrite(in1, HIGH);
+        digitalWrite(in2, LOW);
+        digitalWrite(in3, LOW);
+        digitalWrite(in4, LOW);
+        analogWrite(enB, 100);
+        delay(2000);
+        break;
+      case TURN_BACK90: 
+        digitalWrite(in1, LOW);
+        digitalWrite(in2, HIGH);
+        digitalWrite(in3, LOW);
+        digitalWrite(in4, LOW);
+        analogWrite(enB, 100);
+        delay(2000);
+        break;
+     case TURN_BACK45: 
+        digitalWrite(in1, LOW);
+        digitalWrite(in2, HIGH);
+        digitalWrite(in3, LOW);
+        digitalWrite(in4, LOW);
+        analogWrite(enB, 100);
+        delay(1000);
+        break;
     }
 
     digitalWrite(in1, LOW);

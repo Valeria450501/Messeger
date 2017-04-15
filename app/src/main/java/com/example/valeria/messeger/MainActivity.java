@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         bluetoothHandler = new BluetoothHandler(this);
         messageHandler = new MessageHandler(this.bluetoothHandler);
 
-        if(bluetoothHandler.ckeckBluetoothState())
+        if(bluetoothHandler.ckeckBluetoothState() == true)
             textViewState.setText("Sate: Bluetooth is turned on");
         else
             textViewState.setText("Sate: Bluetooth is turned off");
@@ -79,5 +79,8 @@ public class MainActivity extends AppCompatActivity {
     }
     public String getMessage() {
         return editText.getText().toString();
+    }
+    public int getCoosen(){
+        return this.spinnerRoute.getSelectedItemPosition();
     }
 }
